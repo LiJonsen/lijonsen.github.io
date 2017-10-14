@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lijonsen.github.io/https://LiJonsen.github.io/"/>
-  <updated>2017-10-14T05:14:06.935Z</updated>
+  <updated>2017-10-14T13:02:15.536Z</updated>
   <id>https://lijonsen.github.io/https://LiJonsen.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我的第一遍个人博客记录</title>
+    <link href="https://lijonsen.github.io/https://LiJonsen.github.io/2017/10/14/article-title/"/>
+    <id>https://lijonsen.github.io/https://LiJonsen.github.io/2017/10/14/article-title/</id>
+    <published>2017-10-14T05:22:34.363Z</published>
+    <updated>2017-10-14T13:02:15.536Z</updated>
+    
+    <content type="html"><![CDATA[<p>设置菜单项的显示文本。在第一步中设置的菜单的名称并不直接用于界面上的展示。Hexo 在生成的时候将使用 这个名称查找对应的语言翻译，并提取显示文本。这些翻译文本放置在 NexT 主题目录下的 languages/{language}.yml （{language} 为你所使用的语言）。</p><p>以简体中文为例，若你需要添加一个菜单项，比如 something。那么就需要修改简体中文对应的翻译文件 languages/zh-Hans.yml，在 menu 字段下添加一项：</p><p>设置菜单项的显示文本。在第一步中设置的菜单的名称并不直接用于界面上的展示。Hexo 在生成的时候将使用 这个名称查找对应的语言翻译，并提取显示文本。这些翻译文本放置在 NexT 主题目录下的 languages/{language}.yml （{language} 为你所使用的语言）。</p><p>以简体中文为例，若你需要添加一个菜单项，比如 something。那么就需要修改简体中文对应的翻译文件 languages/zh-Hans.yml，在 menu 字段下添加一项：</p><p>设置菜单项的显示文本。在第一步中设置的菜单的名称并不直接用于界面上的展示。Hexo 在生成的时候将使用 这个名称查找对应的语言翻译，并提取显示文本。这些翻译文本放置在 NexT 主题目录下的 languages/{language}.yml （{language} 为你所使用的语言）。</p><p>以简体中文为例，若你需要添加一个菜单项，比如 something。那么就需要修改简体中文对应的翻译文件 languages/zh-Hans.yml，在 menu 字段下添加一项：</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;设置菜单项的显示文本。在第一步中设置的菜单的名称并不直接用于界面上的展示。Hexo 在生成的时候将使用 这个名称查找对应的语言翻译，并提取显示文本。这些翻译文本放置在 NexT 主题目录下的 languages/{language}.yml （{language} 为你所使
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
