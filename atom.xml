@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://lijonsen.github.io/https://LiJonsen.github.io/"/>
+  <link href="https://lijonsen.github.io%7C%7Chttps://LiJonsen.github.io/"/>
   <updated>2017-10-14T13:02:15.536Z</updated>
-  <id>https://lijonsen.github.io/https://LiJonsen.github.io/</id>
+  <id>https://lijonsen.github.io||https://LiJonsen.github.io/</id>
   
   <author>
     <name>JonsenLi</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>我的第一遍个人博客记录</title>
-    <link href="https://lijonsen.github.io/https://LiJonsen.github.io/2017/10/14/article-title/"/>
-    <id>https://lijonsen.github.io/https://LiJonsen.github.io/2017/10/14/article-title/</id>
+    <link href="https://lijonsen.github.io%7C%7Chttps://LiJonsen.github.io/2017/10/14/article-title/"/>
+    <id>https://lijonsen.github.io||https://LiJonsen.github.io/2017/10/14/article-title/</id>
     <published>2017-10-14T05:22:34.363Z</published>
     <updated>2017-10-14T13:02:15.536Z</updated>
     
@@ -39,8 +39,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://lijonsen.github.io/https://LiJonsen.github.io/2017/10/14/hello-world/"/>
-    <id>https://lijonsen.github.io/https://LiJonsen.github.io/2017/10/14/hello-world/</id>
+    <link href="https://lijonsen.github.io%7C%7Chttps://LiJonsen.github.io/2017/10/14/hello-world/"/>
+    <id>https://lijonsen.github.io||https://LiJonsen.github.io/2017/10/14/hello-world/</id>
     <published>2017-10-14T05:14:06.935Z</published>
     <updated>2017-10-14T05:14:06.935Z</updated>
     
