@@ -73,8 +73,6 @@
 
 
 
-  
-
 
   <link rel="alternate" href="/atom.xml" title="Jonsen个人博客" type="application/atom+xml" />
 
@@ -83,20 +81,24 @@
 
 
 
-<meta name="description" content="环境搭建需求​    ①拥有自己的github个人网页 ​    ②搭建Hexo环境【前提是已经安装node.js和npm】 ​    ③在Hexo基础上配置Next主页 ​    ④如果需要个人域名，则在万网中购买一个">
+<meta name="description" content="文章主要内容：使用Hexo + Next + github 搭建一个属于自己的个人博客">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用Hexo+next+github搭建个人博客">
 <meta property="og:url" content="https://lijonsen.github.io||https://LiJonsen.github.io/2017/10/15/使用Hexo-next-github搭建个人博客/index.html">
 <meta property="og:site_name" content="Jonsen个人博客">
-<meta property="og:description" content="环境搭建需求​    ①拥有自己的github个人网页 ​    ②搭建Hexo环境【前提是已经安装node.js和npm】 ​    ③在Hexo基础上配置Next主页 ​    ④如果需要个人域名，则在万网中购买一个">
+<meta property="og:description" content="文章主要内容：使用Hexo + Next + github 搭建一个属于自己的个人博客">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://lijonsen.github.io/img/bg.jpg">
 <meta property="og:image" content="https://lijonsen.github.io/img/hexo-done.jpg">
 <meta property="og:image" content="https://lijonsen.github.io/img/hexo-index.jpg">
-<meta property="og:updated_time" content="2017-10-15T07:35:07.899Z">
+<meta property="og:image" content="https://lijonsen.github.io/img/ssh.jpg">
+<meta property="og:image" content="https://lijonsen.github.io/img/ssh-key.jpg">
+<meta property="og:image" content="https://lijonsen.github.io/img/hi.jpg">
+<meta property="og:image" content="https://lijonsen.github.io/img/new-post.jpg">
+<meta property="og:updated_time" content="2017-10-15T12:11:34.291Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Hexo+next+github搭建个人博客">
-<meta name="twitter:description" content="环境搭建需求​    ①拥有自己的github个人网页 ​    ②搭建Hexo环境【前提是已经安装node.js和npm】 ​    ③在Hexo基础上配置Next主页 ​    ④如果需要个人域名，则在万网中购买一个">
+<meta name="twitter:description" content="文章主要内容：使用Hexo + Next + github 搭建一个属于自己的个人博客">
 <meta name="twitter:image" content="https://lijonsen.github.io/img/bg.jpg">
 
 
@@ -308,28 +310,61 @@
       
 
       
-        <h4 id="环境搭建需求"><a href="#环境搭建需求" class="headerlink" title="环境搭建需求"></a>环境搭建需求</h4><p>​    ①拥有自己的github个人网页</p>
-<p>​    ②搭建Hexo环境【前提是已经安装node.js和npm】</p>
-<p>​    ③在Hexo基础上配置Next主页</p>
-<p>​    ④如果需要个人域名，则在万网中购买一个</p>
+        <p>文章主要内容：使用Hexo + Next + github 搭建一个属于自己的个人博客</p>
 <p><img src="/img/bg.jpg" alt="Alt text"></p>
 <a id="more"></a>
+<h4 id="环境搭建需求"><a href="#环境搭建需求" class="headerlink" title="环境搭建需求"></a>环境搭建需求</h4><p>​    ①拥有自己的github个人网页</p>
+<p>​    ②搭建Hexo环境【前提是已经安装node.js和npm】</p>
+<p>​    ③在Hexo基础上配置Next主题</p>
+<p>​    ④如果需要个人域名，则在万网中购买一个，也可以使用github给用户配的<a href="https://username.github.io/" target="_blank" rel="external">https://username.github.io/</a></p>
+<p>​    ⑤如果安装了git，也可以通过git Bash操作命令行</p>
 <h4 id="在npm中安装Hexo环境"><a href="#在npm中安装Hexo环境" class="headerlink" title="在npm中安装Hexo环境"></a>在npm中安装Hexo环境</h4><p>​    ①打开cmd命令行下载Hexo：<pre><code>1、npm install hexo-cli -g</code></pre></p>
 <p>​    ②可能你会看到一个WARN，但是不用担心，这不会影响你的正常使用。 然后输入<pre><code>npm install hexo –save</code></pre></p>
 <p>​    ③完成之后重新打开cmd命令，查看Hexo是否安装成功<pre><code>hexo  -v</code></pre></p>
 <p><img src="/img/hexo-done.jpg" alt="Alt text"></p>
-<h4 id="Hexo的相关配置"><a href="#Hexo的相关配置" class="headerlink" title="Hexo的相关配置"></a>Hexo的相关配置</h4><p>​    1、在任意盘创建一个文件夹【如myBlog】，在该文件夹初始化Hexo</p>
-<p>​        <pre><code>a.    hexo init</code></pre></p>
-<p>​        <pre><code>b.    hexo install</code></pre></p>
-<p>​    2、首体验Hexo，继续输入命令：</p>
-<p>​        <pre><code>a.    hexo g</code></pre></p>
+<h4 id="Hexo的相关配置"><a href="#Hexo的相关配置" class="headerlink" title="Hexo的相关配置"></a>Hexo的相关配置</h4><p>​    1、在任意盘创建一个文件夹【如myBlog】，在该文件夹初始化Hexo​<pre><code>a.    hexo init</code></pre>​<pre><code>b.    hexo install</code></pre></p>
+<p>​    2、首体验Hexo，继续输入命令：<pre><code>a.    hexo g</code></pre></p>
 <p>​    3、再次输入一下命令，成功后通过 <a href="http://0.0.0.0:4000访问Hexo生成的页面" target="_blank" rel="external">http://0.0.0.0:4000访问Hexo生成的页面</a></p>
-<p>​        <pre><code>b.    hexo s</code></pre></p>
+<p>​        <pre><code>b.    hexo s     【注意事项：不能点击右上角× 直接退出，需要通过Ctrl + c 退出Hexo服务器才可以操作其他命令】</code></pre></p>
 <p>​        <pre><code> 成功提示：INFO Hexo is running at <a href="http://0.0.0.0:4000/" target="_blank" rel="external">http://0.0.0.0:4000/</a>. Press Ctrl+C to stop.</code></pre></p>
 <p><img src="/img/hexo-index.jpg" alt="Alt text"></p>
 <p>​    </p>
+<h4 id="将Hexo与Github连接起来"><a href="#将Hexo与Github连接起来" class="headerlink" title="将Hexo与Github连接起来"></a>将Hexo与Github连接起来</h4><p>​    <font color="red">注：下面会在Hexo环境下安装各种各样的小插件，插件的所有安装记录可在根目录package.json文件中查看</font></p>
+<p>​    1、安装拓展插件<pre><code>1、        npm install hexo-deployer-git –save</code></pre></p>
+<p>​    2、配置秘钥，将秘钥放置Github中的SSH秘钥存储中</p>
+<p>​            ①将路径切换到以下目录<pre><code>1、    cd ~/.ssh</code></pre></p>
+<p>​            ②生成秘钥，连续三个回车<pre><code>1、    ssh-keygen -t rsa -C “yourEmail@163.com”</code></pre></p>
+<p>​            ③添加秘钥到ssh-agent<pre><code>1、    ssh-add ~/.ssh/id_rsa</code></pre></p>
+<p>​            ④到Github.com你的用户圆头像右上角，单击后出现列表，点击Settings（设置），找到如图选项：</p>
+<p><img src="/img/ssh.jpg" alt="Alt text"></p>
+<p>​            ⑤打开目录C:\Users\15806.ssh\id_rsa.pub文件，全选赋值秘钥，拷贝到github新增的SSH秘钥中：</p>
+<p><img src="/img/ssh-key.jpg" alt="Alt text"></p>
+<p>​            ⑥测试是否已经连接上【注：这里地址不需要更改，直接拷贝】：<pre><code>1、    ssh -T git@github.com</code></pre>，成功如图所示：</p>
+<p><img src="/img/hi.jpg" alt="Alt text"></p>
 <p>​    </p>
-<p>​    </p>
+<p>​        3、配置根目录的_config.yml文件,打开该文件按Ctrl+f搜索deploy，粘贴代码：<pre><code>deploy:</code></pre></p>
+<p>​     type: git</p>
+<p>​     repository: <a href="https://github.com/username/UserName.github.io.git" target="_blank" rel="external">https://github.com/username/UserName.github.io.git</a></p>
+<p>​      branch: master</p>
+<p>​        4、新建一遍文章，测试是否配置成功【如图所示】：<pre><code>1、    hexo new post “title name”</code></pre></p>
+<p><img src="/img/new-post.jpg" alt="Alt text"></p>
+<p>​        查看根目录下的source\ _posts文件夹下已经创建好title-name.md，使用MarDown打开进行编写内容</p>
+<p>​        5、编辑好之后执行生成、部署命令：</p>
+<p>​                第一种方式：<pre><code>1、    hexo g    //生成    2、    hexo d    //部署</code></pre></p>
+<p>​                第二种方式：<pre><code>1、    hexo d -g</code></pre></p>
+<p>​        6、成功后访问<a href="https://yourgithub.github.io/" target="_blank" rel="external">https://yourgithub.github.io/</a></p>
+<h4 id="配置主题Next"><a href="#配置主题Next" class="headerlink" title="配置主题Next"></a>配置主题Next</h4><p>提示：在配置过程中有两个配置文件</p>
+<p>​    ①  位于Hexo根目录下的_config.yml【称为Hexo站点配置文件】</p>
+<p>​    ②位于Next主题下的_config.yml配置文件【称为Next主题配置文件】</p>
+<p>​        </p>
+<p>​        1、在Hexo目录下的themes文件夹创建next文件夹用于存放Next主题，通过git Bash执行以下命令下载Next配置主题<pre><code>git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next</a> themes/next</code></pre></p>
+<p>​        2、下载完成后，启用主题。打开Hexo的站点配置文件_config.yml，找到theme字段改为：</p>
+<pre><code>    theme: next    </code></pre>
+
+
+
+<p>​        3、到这里主题已经安装完成了，下一步则要开始验证是否成功安装，首先执行以下命令将Hexo的缓存清一下:<pre><code>    hexo clean    </code></pre></p>
+<p>​        4、启动Hexo本地站点<pre><code>    hexo s -debug    </code></pre></p>
 
       
     </div>
@@ -509,7 +544,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#环境搭建需求"><span class="nav-number">1.</span> <span class="nav-text">环境搭建需求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在npm中安装Hexo环境"><span class="nav-number">2.</span> <span class="nav-text">在npm中安装Hexo环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Hexo的相关配置"><span class="nav-number">3.</span> <span class="nav-text">Hexo的相关配置</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#环境搭建需求"><span class="nav-number">1.</span> <span class="nav-text">环境搭建需求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在npm中安装Hexo环境"><span class="nav-number">2.</span> <span class="nav-text">在npm中安装Hexo环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Hexo的相关配置"><span class="nav-number">3.</span> <span class="nav-text">Hexo的相关配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#将Hexo与Github连接起来"><span class="nav-number">4.</span> <span class="nav-text">将Hexo与Github连接起来</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置主题Next"><span class="nav-number">5.</span> <span class="nav-text">配置主题Next</span></a></li></ol></div>
             
 
           </div>
