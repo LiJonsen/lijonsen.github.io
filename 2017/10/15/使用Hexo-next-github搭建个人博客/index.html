@@ -83,19 +83,21 @@
 
 
 
-<meta name="description" content="环境搭建需求​    ①拥有自己的github个人网页 ​    ②搭建Hexo环境【前提是已经安装node.js和npm】 ​    ③在Hexo基础上配置Next主页 ​    ④如果需要个人域名，则在万网中购买一个 一、在npm中安装Hexo环境​    ①打开cmd命令行下载Hexo：1、npm install hexo-cli -g ​    ②可能你会看到一个WARN，但是不用担心，这">
+<meta name="description" content="环境搭建需求​    ①拥有自己的github个人网页 ​    ②搭建Hexo环境【前提是已经安装node.js和npm】 ​    ③在Hexo基础上配置Next主页 ​    ④如果需要个人域名，则在万网中购买一个   在npm中安装Hexo环境​    ①打开cmd命令行下载Hexo：1、npm install hexo-cli -g ​    ②可能你会看到一个WARN，但是不用担心，这">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用Hexo+next+github搭建个人博客">
 <meta property="og:url" content="https://lijonsen.github.io||https://LiJonsen.github.io/2017/10/15/使用Hexo-next-github搭建个人博客/index.html">
 <meta property="og:site_name" content="Jonsen个人博客">
-<meta property="og:description" content="环境搭建需求​    ①拥有自己的github个人网页 ​    ②搭建Hexo环境【前提是已经安装node.js和npm】 ​    ③在Hexo基础上配置Next主页 ​    ④如果需要个人域名，则在万网中购买一个 一、在npm中安装Hexo环境​    ①打开cmd命令行下载Hexo：1、npm install hexo-cli -g ​    ②可能你会看到一个WARN，但是不用担心，这">
+<meta property="og:description" content="环境搭建需求​    ①拥有自己的github个人网页 ​    ②搭建Hexo环境【前提是已经安装node.js和npm】 ​    ③在Hexo基础上配置Next主页 ​    ④如果需要个人域名，则在万网中购买一个   在npm中安装Hexo环境​    ①打开cmd命令行下载Hexo：1、npm install hexo-cli -g ​    ②可能你会看到一个WARN，但是不用担心，这">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://lijonsen.github.io/img/bg.jpg">
 <meta property="og:image" content="https://lijonsen.github.io/img/hexo-done.jpg">
-<meta property="og:updated_time" content="2017-10-15T06:35:29.892Z">
+<meta property="og:image" content="https://lijonsen.github.io/img/hexo-index.jpg">
+<meta property="og:updated_time" content="2017-10-15T07:33:19.135Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Hexo+next+github搭建个人博客">
-<meta name="twitter:description" content="环境搭建需求​    ①拥有自己的github个人网页 ​    ②搭建Hexo环境【前提是已经安装node.js和npm】 ​    ③在Hexo基础上配置Next主页 ​    ④如果需要个人域名，则在万网中购买一个 一、在npm中安装Hexo环境​    ①打开cmd命令行下载Hexo：1、npm install hexo-cli -g ​    ②可能你会看到一个WARN，但是不用担心，这">
-<meta name="twitter:image" content="https://lijonsen.github.io/img/hexo-done.jpg">
+<meta name="twitter:description" content="环境搭建需求​    ①拥有自己的github个人网页 ​    ②搭建Hexo环境【前提是已经安装node.js和npm】 ​    ③在Hexo基础上配置Next主页 ​    ④如果需要个人域名，则在万网中购买一个   在npm中安装Hexo环境​    ①打开cmd命令行下载Hexo：1、npm install hexo-cli -g ​    ②可能你会看到一个WARN，但是不用担心，这">
+<meta name="twitter:image" content="https://lijonsen.github.io/img/bg.jpg">
 
 
 
@@ -310,17 +312,22 @@
 <p>​    ②搭建Hexo环境【前提是已经安装node.js和npm】</p>
 <p>​    ③在Hexo基础上配置Next主页</p>
 <p>​    ④如果需要个人域名，则在万网中购买一个</p>
-<h4 id="一、在npm中安装Hexo环境"><a href="#一、在npm中安装Hexo环境" class="headerlink" title="一、在npm中安装Hexo环境"></a>一、在npm中安装Hexo环境</h4><p>​    ①打开cmd命令行下载Hexo：<pre><code>1、npm install hexo-cli -g</code></pre></p>
+<p><img src="/img/bg.jpg" alt="Alt text"></p>
+<hr>
+<h4 id="在npm中安装Hexo环境"><a href="#在npm中安装Hexo环境" class="headerlink" title="在npm中安装Hexo环境"></a>在npm中安装Hexo环境</h4><p>​    ①打开cmd命令行下载Hexo：<pre><code>1、npm install hexo-cli -g</code></pre></p>
 <p>​    ②可能你会看到一个WARN，但是不用担心，这不会影响你的正常使用。 然后输入<pre><code>npm install hexo –save</code></pre></p>
 <p>​    ③完成之后重新打开cmd命令，查看Hexo是否安装成功<pre><code>hexo  -v</code></pre></p>
 <p><img src="/img/hexo-done.jpg" alt="Alt text"></p>
-<h4 id="二、Hexo的相关配置"><a href="#二、Hexo的相关配置" class="headerlink" title="二、Hexo的相关配置"></a>二、Hexo的相关配置</h4><p>​    1、在任意盘创建一个文件夹【如myBlog】，在该文件夹初始化Hexo</p>
-<p>​        a.<pre><code>hexo init</code></pre></p>
-<p>​        b.<pre><code>hexo install</code></pre></p>
+<h4 id="Hexo的相关配置"><a href="#Hexo的相关配置" class="headerlink" title="Hexo的相关配置"></a>Hexo的相关配置</h4><p>​    1、在任意盘创建一个文件夹【如myBlog】，在该文件夹初始化Hexo</p>
+<p>​        <pre><code>a.    hexo init</code></pre></p>
+<p>​        <pre><code>b.    hexo install</code></pre></p>
 <p>​    2、首体验Hexo，继续输入命令：</p>
-<p>​        a.<pre><code>hexo g</code></pre></p>
-<p>​        b.<pre><code>hexo s</code></pre></p>
-<p>​    3、</p>
+<p>​        <pre><code>a.    hexo g</code></pre></p>
+<p>​    3、再次输入一下命令，成功后通过 <a href="http://0.0.0.0:4000访问Hexo生成的页面" target="_blank" rel="external">http://0.0.0.0:4000访问Hexo生成的页面</a></p>
+<p>​        <pre><code>b.    hexo s</code></pre></p>
+<p>​        <pre><code> 成功提示：INFO Hexo is running at <a href="http://0.0.0.0:4000/" target="_blank" rel="external">http://0.0.0.0:4000/</a>. Press Ctrl+C to stop.</code></pre></p>
+<p><img src="/img/hexo-index.jpg" alt="Alt text"></p>
+<p>​    </p>
 <p>​    </p>
 <p>​    </p>
 
@@ -473,7 +480,7 @@
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://muzisimao.github.io/" target="_blank" title="友情链接">
+                  <a href="https://muzaisimao.github.io/" target="_blank" title="友情链接">
                     
                       <i class="fa fa-fw fa-google"></i>友情链接</a>
                 </span>
@@ -502,7 +509,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#环境搭建需求"><span class="nav-number">1.</span> <span class="nav-text">环境搭建需求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一、在npm中安装Hexo环境"><span class="nav-number">2.</span> <span class="nav-text">一、在npm中安装Hexo环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二、Hexo的相关配置"><span class="nav-number">3.</span> <span class="nav-text">二、Hexo的相关配置</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#环境搭建需求"><span class="nav-number">1.</span> <span class="nav-text">环境搭建需求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在npm中安装Hexo环境"><span class="nav-number">2.</span> <span class="nav-text">在npm中安装Hexo环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Hexo的相关配置"><span class="nav-number">3.</span> <span class="nav-text">Hexo的相关配置</span></a></li></ol></div>
             
 
           </div>
