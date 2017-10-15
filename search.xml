@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[使用Hexo+next+github搭建个人博客]]></title>
     <url>%2F2017%2F10%2F15%2F%E4%BD%BF%E7%94%A8Hexo-next-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%2F</url>
-    <content type="text"><![CDATA[环境搭建需求​ ①拥有自己的github个人网页 ​ ②搭建Hexo环境【前提是已经安装node.js和npm】 ​ ③在Hexo基础上配置Next主页 ​ ④如果需要个人域名，则在万网中购买一个 一、在npm中安装Hexo环境 ​ ①打开cmd命令行下载Hexo：1、npm install hexo-cli -g ​ ②可能你会看到一个WARN，但是不用担心，这不会影响你的正常使用。 然后输入npm install hexo –save ​ ③完成之后重新打开cmd命令，查看Hexo是否安装成功hexo -v]]></content>
+    <content type="text"><![CDATA[环境搭建需求​ ①拥有自己的github个人网页 ​ ②搭建Hexo环境【前提是已经安装node.js和npm】 ​ ③在Hexo基础上配置Next主页 ​ ④如果需要个人域名，则在万网中购买一个 一、在npm中安装Hexo环境​ ①打开cmd命令行下载Hexo：1、npm install hexo-cli -g ​ ②可能你会看到一个WARN，但是不用担心，这不会影响你的正常使用。 然后输入npm install hexo –save ​ ③完成之后重新打开cmd命令，查看Hexo是否安装成功hexo -v 二、Hexo的相关配置​ 1、在任意盘创建一个文件夹【如myBlog】，在该文件夹初始化Hexo ​ a.hexo init ​ b.hexo install ​ 2、首体验Hexo，继续输入命令： ​ a.hexo g ​ b.hexo s ​ 3、 ​ ​]]></content>
   </entry>
   <entry>
     <title><![CDATA[定位深圳]]></title>
