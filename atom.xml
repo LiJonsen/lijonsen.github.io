@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lijonsen.github.io%7C%7Chttps://LiJonsen.github.io/"/>
-  <updated>2017-11-12T15:18:15.071Z</updated>
+  <updated>2017-10-28T02:44:47.925Z</updated>
   <id>https://lijonsen.github.io||https://LiJonsen.github.io/</id>
   
   <author>
@@ -15,26 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>MongoDB快速入门</title>
-    <link href="https://lijonsen.github.io%7C%7Chttps://LiJonsen.github.io/2017/11/12/MongoDB%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/"/>
-    <id>https://lijonsen.github.io||https://LiJonsen.github.io/2017/11/12/MongoDB快速入门/</id>
-    <published>2017-11-12T12:05:34.000Z</published>
-    <updated>2017-11-12T15:18:15.071Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><br></p><p>MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。</p><p>MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。<br><img src="https://i.imgur.com/IJN2NJr.jpg" alt=""><br><a id="more"></a></p><h2 id="安装MongoDB"><a href="#安装MongoDB" class="headerlink" title="安装MongoDB"></a>安装MongoDB</h2><p>进入官网安装：<a href="https://www.mongodb.com/download-center?jmp=nav#community" target="_blank" rel="external">https://www.mongodb.com/download-center?jmp=nav#community</a></p><h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3><p><strong>打开环境变量窗口进入path目录，点击新建—复制MongoDB下的bin文件夹安装路径丢进变量里面 【图示】</strong><br><img src="https://i.imgur.com/bN6q3JF.png" alt=""></p><p><img src="https://i.imgur.com/RCHATOq.png" alt=""><br><img src="https://i.imgur.com/p8Xj7c4.png" alt=""></p><p><strong>完成环境变量配置后，创建一个文件夹在任意盘，在桌面创建一个mongo.bat文件，里面写入<font color="red">mongod –dbpath d:\my_html\itheima\nodejs\文件夹路径</font>，完成后双击桌面的bat文件即可打开mongodb数据库 【成功如图所示】</strong><br><img src="https://i.imgur.com/FpY8uXb.png" alt=""></p><hr><h2 id="安装RoboMangodb图形化界面管理数据库"><a href="#安装RoboMangodb图形化界面管理数据库" class="headerlink" title="安装RoboMangodb图形化界面管理数据库"></a>安装RoboMangodb图形化界面管理数据库</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。&lt;/p&gt;
-&lt;p&gt;MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。&lt;br&gt;&lt;img src=&quot;https://i.imgur.com/IJN2NJr.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>PHP中的cookie和session</title>
