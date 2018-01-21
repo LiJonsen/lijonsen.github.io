@@ -3,23 +3,12 @@
   <entry>
     <title><![CDATA[js内存泄漏]]></title>
     <url>%2F2018%2F01%2F21%2Fjs%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%2F</url>
-    <content type="text"><![CDATA[###什么是内存泄漏？ 程序运行需要内存。只要程序提出要求，操作系统或者运行时就必须供给内存。 对于持续运行的服务进程，必须及时释放不再用到的内存。否则，内存占用越来越高，轻则影响系统性能，重则导致进程崩溃。 ###垃圾回收机制 所谓的垃圾回收机制，就是通过变量的引用次数来决定是否回收。 如果一个值的引用次数为0，就表示不再用到，这个值就会被垃圾回收机制找到回收并释放 例： var arr = [1,2,3,4]; arr = null; //当变量赋值为null时，引用次数为0 ###内存泄漏识别方法 怎样可以观察到内存泄漏呢？ 如果连续五次垃圾回收之后，内存占用一次比一次大，就有内存泄漏。这就要求实时查看内存占用 Chrome游览器操作步骤： 1. 打开开发者工具，选择Performance面板 2. 点击勾选Memory，点击录制按钮（或Ctrl+E） 3. 在页面上模拟用户操作 4. 操作完成后点击Stop(Ctrl+E)完成录制 如果内存占用基本平稳，接近水平，说明不存在内存泄漏。反之，内存波动差距较大就是内存泄漏 使用Node命令使用Node提供process.memoryUsage()方法返回一个对象，包含Node进程的内存占用信息，该对象包含四个字段。 1.res(resident set size):所有内存占用，包括指令区和堆栈 2.heapTotal: “堆”占用的内存，包括用到的和没用到的 3.heapUsed: 用到的堆的部分，判断内存泄漏以该字段为准 4.external: V8 引擎内部的C++对象占用的内存 该文章为个人笔记，原文来自于阮老师]]></content>
+    <content type="text"><![CDATA[什么是内存泄漏？程序运行需要内存。只要程序提出要求，操作系统或者运行时就必须供给内存。 对于持续运行的服务进程，必须及时释放不再用到的内存。否则，内存占用越来越高，轻则影响系统性能，重则导致进程崩溃。 垃圾回收机制所谓的垃圾回收机制，就是通过变量的引用次数来决定是否回收。 如果一个值的引用次数为0，就表示不再用到，这个值就会被垃圾回收机制找到回收并释放 例： var arr = [1,2,3,4]; arr = null; //当变量赋值为null时，引用次数为0 内存泄漏识别方法怎样可以观察到内存泄漏呢？ 如果连续五次垃圾回收之后，内存占用一次比一次大，就有内存泄漏。这就要求实时查看内存占用 Chrome游览器操作步骤： 1. 打开开发者工具，选择Performance面板 2. 点击勾选Memory，点击录制按钮（或Ctrl+E） 3. 在页面上模拟用户操作 4. 操作完成后点击Stop(Ctrl+E)完成录制 如果内存占用基本平稳，接近水平，说明不存在内存泄漏。反之，内存波动差距较大就是内存泄漏 使用Node命令使用Node提供process.memoryUsage()方法返回一个对象，包含Node进程的内存占用信息，该对象包含四个字段。 1.res(resident set size):所有内存占用，包括指令区和堆栈 2.heapTotal: “堆”占用的内存，包括用到的和没用到的 3.heapUsed: 用到的堆的部分，判断内存泄漏以该字段为准 4.external: V8 引擎内部的C++对象占用的内存 该文章为个人笔记，原文来自于阮老师]]></content>
       <categories>
         <category>js内存</category>
       </categories>
       <tags>
         <tag>JavascriptES6</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Vue-router学习笔记]]></title>
-    <url>%2F2017%2F04%2F10%2FVue-router%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%2F</url>
-    <content type="text"></content>
-      <categories>
-        <category>Vue-router学习笔记</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
       </tags>
   </entry>
   <entry>

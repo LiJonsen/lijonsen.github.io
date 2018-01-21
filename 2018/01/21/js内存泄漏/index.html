@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="###什么是内存泄漏？ 程序运行需要内存。只要程序提出要求，操作系统或者运行时就必须供给内存。  对于持续运行的服务进程，必须及时释放不再用到的内存。否则，内存占用越来越高，轻则影响系统性能，重则导致进程崩溃。 ###垃圾回收机制 所谓的垃圾回收机制，就是通过变量的引用次数来决定是否回收。  如果一个值的引用次数为0，就表示不再用到，这个值就会被垃圾回收机制找到回收并释放  例： var arr">
+<meta name="description" content="什么是内存泄漏？程序运行需要内存。只要程序提出要求，操作系统或者运行时就必须供给内存。  对于持续运行的服务进程，必须及时释放不再用到的内存。否则，内存占用越来越高，轻则影响系统性能，重则导致进程崩溃。">
 <meta name="keywords" content="JavascriptES6">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js内存泄漏">
 <meta property="og:url" content="https://lijonsen.github.io||https://LiJonsen.github.io/2018/01/21/js内存泄漏/index.html">
 <meta property="og:site_name" content="Jonsen">
-<meta property="og:description" content="###什么是内存泄漏？ 程序运行需要内存。只要程序提出要求，操作系统或者运行时就必须供给内存。  对于持续运行的服务进程，必须及时释放不再用到的内存。否则，内存占用越来越高，轻则影响系统性能，重则导致进程崩溃。 ###垃圾回收机制 所谓的垃圾回收机制，就是通过变量的引用次数来决定是否回收。  如果一个值的引用次数为0，就表示不再用到，这个值就会被垃圾回收机制找到回收并释放  例： var arr">
+<meta property="og:description" content="什么是内存泄漏？程序运行需要内存。只要程序提出要求，操作系统或者运行时就必须供给内存。  对于持续运行的服务进程，必须及时释放不再用到的内存。否则，内存占用越来越高，轻则影响系统性能，重则导致进程崩溃。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-21T02:57:56.800Z">
+<meta property="og:updated_time" content="2018-01-21T11:40:37.524Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js内存泄漏">
-<meta name="twitter:description" content="###什么是内存泄漏？ 程序运行需要内存。只要程序提出要求，操作系统或者运行时就必须供给内存。  对于持续运行的服务进程，必须及时释放不再用到的内存。否则，内存占用越来越高，轻则影响系统性能，重则导致进程崩溃。 ###垃圾回收机制 所谓的垃圾回收机制，就是通过变量的引用次数来决定是否回收。  如果一个值的引用次数为0，就表示不再用到，这个值就会被垃圾回收机制找到回收并释放  例： var arr">
+<meta name="twitter:description" content="什么是内存泄漏？程序运行需要内存。只要程序提出要求，操作系统或者运行时就必须供给内存。  对于持续运行的服务进程，必须及时释放不再用到的内存。否则，内存占用越来越高，轻则影响系统性能，重则导致进程崩溃。">
 
 
 
@@ -335,19 +335,17 @@
       
 
       
-        <p>###什么是内存泄漏？</p>
-<pre><code>程序运行需要内存。只要程序提出要求，操作系统或者运行时就必须供给内存。
+        <h3 id="什么是内存泄漏？"><a href="#什么是内存泄漏？" class="headerlink" title="什么是内存泄漏？"></a>什么是内存泄漏？</h3><pre><code>程序运行需要内存。只要程序提出要求，操作系统或者运行时就必须供给内存。
 
 对于持续运行的服务进程，必须及时释放不再用到的内存。否则，内存占用越来越高，轻则影响系统性能，重则导致进程崩溃。
-</code></pre><p>###垃圾回收机制</p>
-<pre><code>所谓的垃圾回收机制，就是通过变量的引用次数来决定是否回收。
+</code></pre><a id="more"></a>
+<h3 id="垃圾回收机制"><a href="#垃圾回收机制" class="headerlink" title="垃圾回收机制"></a>垃圾回收机制</h3><pre><code>所谓的垃圾回收机制，就是通过变量的引用次数来决定是否回收。
 
 如果一个值的引用次数为0，就表示不再用到，这个值就会被垃圾回收机制找到回收并释放
 
 例： var arr = [1,2,3,4]; 
     arr = null; //当变量赋值为null时，引用次数为0
-</code></pre><p>###内存泄漏识别方法</p>
-<pre><code>怎样可以观察到内存泄漏呢？
+</code></pre><h3 id="内存泄漏识别方法"><a href="#内存泄漏识别方法" class="headerlink" title="内存泄漏识别方法"></a>内存泄漏识别方法</h3><pre><code>怎样可以观察到内存泄漏呢？
 
 如果连续五次垃圾回收之后，内存占用一次比一次大，就有内存泄漏。这就要求实时查看内存占用
 </code></pre><h4 id="Chrome游览器"><a href="#Chrome游览器" class="headerlink" title="Chrome游览器"></a>Chrome游览器</h4><pre><code>操作步骤：
@@ -412,8 +410,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/10/Vue-router学习笔记/" rel="next" title="Vue-router学习笔记">
-                <i class="fa fa-chevron-left"></i> Vue-router学习笔记
+              <a href="/2016/07/14/定位深圳/" rel="next" title="PHP中的cookie和session">
+                <i class="fa fa-chevron-left"></i> PHP中的cookie和session
               </a>
             
           </div>
@@ -501,7 +499,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -597,7 +595,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Chrome游览器"><span class="nav-number">1.</span> <span class="nav-text">Chrome游览器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用Node命令"><span class="nav-number">2.</span> <span class="nav-text">使用Node命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是内存泄漏？"><span class="nav-number">1.</span> <span class="nav-text">什么是内存泄漏？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#垃圾回收机制"><span class="nav-number">2.</span> <span class="nav-text">垃圾回收机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内存泄漏识别方法"><span class="nav-number">3.</span> <span class="nav-text">内存泄漏识别方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Chrome游览器"><span class="nav-number">3.1.</span> <span class="nav-text">Chrome游览器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用Node命令"><span class="nav-number">3.2.</span> <span class="nav-text">使用Node命令</span></a></li></ol></li></ol></div>
             
 
           </div>

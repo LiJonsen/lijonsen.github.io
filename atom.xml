@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lijonsen.github.io%7C%7Chttps://LiJonsen.github.io/"/>
-  <updated>2018-01-21T02:57:56.800Z</updated>
+  <updated>2018-01-21T11:40:37.524Z</updated>
   <id>https://lijonsen.github.io||https://LiJonsen.github.io/</id>
   
   <author>
@@ -21,20 +21,16 @@
     <link href="https://lijonsen.github.io%7C%7Chttps://LiJonsen.github.io/2018/01/21/js%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F/"/>
     <id>https://lijonsen.github.io||https://LiJonsen.github.io/2018/01/21/js内存泄漏/</id>
     <published>2018-01-21T02:11:00.000Z</published>
-    <updated>2018-01-21T02:57:56.800Z</updated>
+    <updated>2018-01-21T11:40:37.524Z</updated>
     
-    <content type="html"><![CDATA[<p>###什么是内存泄漏？</p><pre><code>程序运行需要内存。只要程序提出要求，操作系统或者运行时就必须供给内存。对于持续运行的服务进程，必须及时释放不再用到的内存。否则，内存占用越来越高，轻则影响系统性能，重则导致进程崩溃。</code></pre><p>###垃圾回收机制</p><pre><code>所谓的垃圾回收机制，就是通过变量的引用次数来决定是否回收。如果一个值的引用次数为0，就表示不再用到，这个值就会被垃圾回收机制找到回收并释放例： var arr = [1,2,3,4];     arr = null; //当变量赋值为null时，引用次数为0</code></pre><p>###内存泄漏识别方法</p><pre><code>怎样可以观察到内存泄漏呢？如果连续五次垃圾回收之后，内存占用一次比一次大，就有内存泄漏。这就要求实时查看内存占用</code></pre><h4 id="Chrome游览器"><a href="#Chrome游览器" class="headerlink" title="Chrome游览器"></a>Chrome游览器</h4><pre><code>操作步骤：1. 打开开发者工具，选择Performance面板2. 点击勾选Memory，点击录制按钮（或Ctrl+E）3. 在页面上模拟用户操作4. 操作完成后点击Stop(Ctrl+E)完成录制</code></pre><blockquote><p>如果内存占用基本平稳，接近水平，说明不存在内存泄漏。<br>反之，内存波动差距较大就是内存泄漏</p></blockquote><h4 id="使用Node命令"><a href="#使用Node命令" class="headerlink" title="使用Node命令"></a>使用Node命令</h4><p>使用Node提供process.memoryUsage()方法返回一个对象，包含Node进程的内存占用信息，该对象包含四个字段。</p><blockquote><p>1.res(resident set size):所有内存占用，包括指令区和堆栈</p><p>2.heapTotal: “堆”占用的内存，包括用到的和没用到的</p><p>3.heapUsed: 用到的堆的部分，判断内存泄漏以该字段为准</p><p>4.external: V8 引擎内部的C++对象占用的内存</p></blockquote><p><a href="www.ruanyifeng.com">该文章为个人笔记，原文来自于阮老师</a></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="什么是内存泄漏？"><a href="#什么是内存泄漏？" class="headerlink" title="什么是内存泄漏？"></a>什么是内存泄漏？</h3><pre><code>程序运行需要内存。只要程序提出要求，操作系统或者运行时就必须供给内存。对于持续运行的服务进程，必须及时释放不再用到的内存。否则，内存占用越来越高，轻则影响系统性能，重则导致进程崩溃。</code></pre><a id="more"></a><h3 id="垃圾回收机制"><a href="#垃圾回收机制" class="headerlink" title="垃圾回收机制"></a>垃圾回收机制</h3><pre><code>所谓的垃圾回收机制，就是通过变量的引用次数来决定是否回收。如果一个值的引用次数为0，就表示不再用到，这个值就会被垃圾回收机制找到回收并释放例： var arr = [1,2,3,4];     arr = null; //当变量赋值为null时，引用次数为0</code></pre><h3 id="内存泄漏识别方法"><a href="#内存泄漏识别方法" class="headerlink" title="内存泄漏识别方法"></a>内存泄漏识别方法</h3><pre><code>怎样可以观察到内存泄漏呢？如果连续五次垃圾回收之后，内存占用一次比一次大，就有内存泄漏。这就要求实时查看内存占用</code></pre><h4 id="Chrome游览器"><a href="#Chrome游览器" class="headerlink" title="Chrome游览器"></a>Chrome游览器</h4><pre><code>操作步骤：1. 打开开发者工具，选择Performance面板2. 点击勾选Memory，点击录制按钮（或Ctrl+E）3. 在页面上模拟用户操作4. 操作完成后点击Stop(Ctrl+E)完成录制</code></pre><blockquote><p>如果内存占用基本平稳，接近水平，说明不存在内存泄漏。<br>反之，内存波动差距较大就是内存泄漏</p></blockquote><h4 id="使用Node命令"><a href="#使用Node命令" class="headerlink" title="使用Node命令"></a>使用Node命令</h4><p>使用Node提供process.memoryUsage()方法返回一个对象，包含Node进程的内存占用信息，该对象包含四个字段。</p><blockquote><p>1.res(resident set size):所有内存占用，包括指令区和堆栈</p><p>2.heapTotal: “堆”占用的内存，包括用到的和没用到的</p><p>3.heapUsed: 用到的堆的部分，判断内存泄漏以该字段为准</p><p>4.external: V8 引擎内部的C++对象占用的内存</p></blockquote><p><a href="www.ruanyifeng.com">该文章为个人笔记，原文来自于阮老师</a></p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;###什么是内存泄漏？&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;程序运行需要内存。只要程序提出要求，操作系统或者运行时就必须供给内存。
+      &lt;h3 id=&quot;什么是内存泄漏？&quot;&gt;&lt;a href=&quot;#什么是内存泄漏？&quot; class=&quot;headerlink&quot; title=&quot;什么是内存泄漏？&quot;&gt;&lt;/a&gt;什么是内存泄漏？&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;程序运行需要内存。只要程序提出要求，操作系统或者运行时就必须供给内存。
 
 对于持续运行的服务进程，必须及时释放不再用到的内存。否则，内存占用越来越高，轻则影响系统性能，重则导致进程崩溃。
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;
-      
+&lt;/code&gt;&lt;/pre&gt;
     
     </summary>
     
@@ -42,24 +38,6 @@
     
     
       <category term="JavascriptES6" scheme="https://lijonsen.github.io%7C%7Chttps://LiJonsen.github.io/tags/JavascriptES6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vue-router学习笔记</title>
-    <link href="https://lijonsen.github.io%7C%7Chttps://LiJonsen.github.io/2017/04/10/Vue-router%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>https://lijonsen.github.io||https://LiJonsen.github.io/2017/04/10/Vue-router学习笔记/</id>
-    <published>2017-04-10T01:55:15.000Z</published>
-    <updated>2017-12-10T02:07:28.672Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="Vue-router学习笔记" scheme="https://lijonsen.github.io%7C%7Chttps://LiJonsen.github.io/categories/Vue-router%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="Vue" scheme="https://lijonsen.github.io%7C%7Chttps://LiJonsen.github.io/tags/Vue/"/>
     
   </entry>
   
