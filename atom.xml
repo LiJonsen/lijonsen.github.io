@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lijonsen.github.io%7C%7Chttps://LiJonsen.github.io/"/>
-  <updated>2017-10-28T02:44:47.925Z</updated>
+  <updated>2018-01-21T02:57:56.800Z</updated>
   <id>https://lijonsen.github.io||https://LiJonsen.github.io/</id>
   
   <author>
@@ -17,11 +17,58 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>js内存泄漏</title>
+    <link href="https://lijonsen.github.io%7C%7Chttps://LiJonsen.github.io/2018/01/21/js%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F/"/>
+    <id>https://lijonsen.github.io||https://LiJonsen.github.io/2018/01/21/js内存泄漏/</id>
+    <published>2018-01-21T02:11:00.000Z</published>
+    <updated>2018-01-21T02:57:56.800Z</updated>
+    
+    <content type="html"><![CDATA[<p>###什么是内存泄漏？</p><pre><code>程序运行需要内存。只要程序提出要求，操作系统或者运行时就必须供给内存。对于持续运行的服务进程，必须及时释放不再用到的内存。否则，内存占用越来越高，轻则影响系统性能，重则导致进程崩溃。</code></pre><p>###垃圾回收机制</p><pre><code>所谓的垃圾回收机制，就是通过变量的引用次数来决定是否回收。如果一个值的引用次数为0，就表示不再用到，这个值就会被垃圾回收机制找到回收并释放例： var arr = [1,2,3,4];     arr = null; //当变量赋值为null时，引用次数为0</code></pre><p>###内存泄漏识别方法</p><pre><code>怎样可以观察到内存泄漏呢？如果连续五次垃圾回收之后，内存占用一次比一次大，就有内存泄漏。这就要求实时查看内存占用</code></pre><h4 id="Chrome游览器"><a href="#Chrome游览器" class="headerlink" title="Chrome游览器"></a>Chrome游览器</h4><pre><code>操作步骤：1. 打开开发者工具，选择Performance面板2. 点击勾选Memory，点击录制按钮（或Ctrl+E）3. 在页面上模拟用户操作4. 操作完成后点击Stop(Ctrl+E)完成录制</code></pre><blockquote><p>如果内存占用基本平稳，接近水平，说明不存在内存泄漏。<br>反之，内存波动差距较大就是内存泄漏</p></blockquote><h4 id="使用Node命令"><a href="#使用Node命令" class="headerlink" title="使用Node命令"></a>使用Node命令</h4><p>使用Node提供process.memoryUsage()方法返回一个对象，包含Node进程的内存占用信息，该对象包含四个字段。</p><blockquote><p>1.res(resident set size):所有内存占用，包括指令区和堆栈</p><p>2.heapTotal: “堆”占用的内存，包括用到的和没用到的</p><p>3.heapUsed: 用到的堆的部分，判断内存泄漏以该字段为准</p><p>4.external: V8 引擎内部的C++对象占用的内存</p></blockquote><p><a href="www.ruanyifeng.com">该文章为个人笔记，原文来自于阮老师</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;###什么是内存泄漏？&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;程序运行需要内存。只要程序提出要求，操作系统或者运行时就必须供给内存。
+
+对于持续运行的服务进程，必须及时释放不再用到的内存。否则，内存占用越来越高，轻则影响系统性能，重则导致进程崩溃。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;
+      
+    
+    </summary>
+    
+      <category term="js内存" scheme="https://lijonsen.github.io%7C%7Chttps://LiJonsen.github.io/categories/js%E5%86%85%E5%AD%98/"/>
+    
+    
+      <category term="JavascriptES6" scheme="https://lijonsen.github.io%7C%7Chttps://LiJonsen.github.io/tags/JavascriptES6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue-router学习笔记</title>
+    <link href="https://lijonsen.github.io%7C%7Chttps://LiJonsen.github.io/2017/04/10/Vue-router%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://lijonsen.github.io||https://LiJonsen.github.io/2017/04/10/Vue-router学习笔记/</id>
+    <published>2017-04-10T01:55:15.000Z</published>
+    <updated>2017-12-10T02:07:28.672Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Vue-router学习笔记" scheme="https://lijonsen.github.io%7C%7Chttps://LiJonsen.github.io/categories/Vue-router%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Vue" scheme="https://lijonsen.github.io%7C%7Chttps://LiJonsen.github.io/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
     <title>PHP中的cookie和session</title>
-    <link href="https://lijonsen.github.io%7C%7Chttps://LiJonsen.github.io/2017/10/14/%E5%AE%9A%E4%BD%8D%E6%B7%B1%E5%9C%B3/"/>
-    <id>https://lijonsen.github.io||https://LiJonsen.github.io/2017/10/14/定位深圳/</id>
-    <published>2017-10-14T14:15:47.000Z</published>
-    <updated>2017-10-28T02:44:47.925Z</updated>
+    <link href="https://lijonsen.github.io%7C%7Chttps://LiJonsen.github.io/2016/07/14/%E5%AE%9A%E4%BD%8D%E6%B7%B1%E5%9C%B3/"/>
+    <id>https://lijonsen.github.io||https://LiJonsen.github.io/2016/07/14/定位深圳/</id>
+    <published>2016-07-14T14:15:47.000Z</published>
+    <updated>2017-12-10T01:59:51.265Z</updated>
     
     <content type="html"><![CDATA[<p>一、会话技术Cookie和Session =》http协议</p><p>​    1、Cookie是客户端数，服务器把每个用户的数据以cookie的形式写给用户各自的游览器。当用户使用游览器再去访问服务器中的web资源时，就会带着各自的数据去，这样web资源处理的就是用户各自的数据了</p><p>​    2、作用：</p><p>​            （1）保存上次登录时间等信息</p><p>​            （2）保存用户名、密码、在一定时间不用重新登录</p><p>​            （3）记录用户访问网站的喜好</p><p>​            （4）网站的个性化，比如定制网站的服务，内容</p><p>​            </p><p>​    3、cookie基本使用</p><p>​            （1）setCookie(“name”,”jiaosen”,”3600”);</p><p>​        说明：参数一和参数二是一个键值对</p><p>​                参数一：Cookie的键</p><p>​                参数二：Cookie的值</p><p>​                参数二：Cookie在客户端保存的时间【按秒计算】</p><p>​    4、详细说明：</p><p>​            （1）当游览器访问 cookie.php页面的时候，我们的服务器就会以一种特定的形式会送http响应，当游览器获取到信息后，就会保存该cookie到本机特定文件里</p><p>​            （2）如果没有事件【参数三】，cookie不会保存到客户端，当游览器的会话结束，我们的cookie就会失效</p><p>​            （3）cookie只能保存字符串</p><p>​            （4）如果重新访问创建cookie的那个页面，相当于把cookie的生命周期刷新了</p><p>​            （5）cookie也可以保存中文，默认对中文进行urldecode编码</p><p>​            （6）可以有多个cookie值，可以给不同的键值对，设置不同的有效时间</p><p>​            （7）客户端cookie值始终针对一个用户而言，与其他的用户的访问cookie值无关</p><p>​            （8）方案1：check_add.php头部：&lt;?php date_default_timezone_set(“PRC”);  ?&gt;  设置默认时区为北京时间。。解决当前页面。</p><p>方案2：在php.ini中设置date.timezone的值为PRC，设置好以后的为：date.timezone=PRC，同时取消这一行代码的注释，即去掉前面的分号就可以了。</p><p>​            （9）如果setcookie()没有写参数三，那么这个cookie值当游览器关闭的时候清除，并且不会存储在cookies会话存储文件里</p><p>​        5、如何更新Cookie信息</p><p>​            语法：setCookie();</p><p>​        6、删除Cookie信息</p><p>​                （1）指定删除</p><p>​                    //删除的时间是负数，只要是小于当前设置的时间就可以</p><p>​                    setCookie(“key”,””,time()-200);</p><p>​    setCookie(“name”,””,time()-200);</p><p>​                （2）全部删除</p><p>删除所有cookie值</p><p> foreach($_COOKIE as $key=&gt;$val){</p><p>​     setCookie($key,””,time()-200);</p><p>}</p><p>​            6、cookie弊端    </p><p>​                ①不安全，因为cookie是以明文的方式传输的</p><p>​                ②只能传输小型数据</p><p>​                ③在网络传数据带宽消耗的问题</p><p>二、session技术</p><p>​        1、session默认保存在C:/windows/temp文件目录下</p><p>​        2、设置session: </p><p>​                ①   初始化session_start();      设置$_SESSION[‘name’]=”jonsen”;    </p><p>​                ②保存的格式name|s:6:”jonsen”;  键–s数据类型–6数据大小–值</p><p>​                ③注意：key【键名不能重复】</p><p>​        3、获取session数据</p><p>​                ①   初始化session_start();      设置$name = $_SESSION[‘name’];</p><p>​                ②session文件中可以保存所有的数据类型【double,integer,bool,array,object】</p><p>​                ③如果取出对象，则需要先声明一下类的定义信息，如果是引入声明信息文件，则require_once在session_start(); 之前声明</p><p>​        4、更新session数据</p><p>​                ①    session_start();</p><p>​                        $_SESSION[‘name’]=”黎教森”;</p><pre><code>echo &quot;更新成功&quot;;</code></pre><p>​        5、删除session数据</p><p>​                ①删除某一个session数据</p><p>​                      session_start();//初始化session</p><p>​                       // unset()方法，删除/释放某一个变量</p><p>​                        unset($_SESSION[‘name’]);</p><p>​                ②删除所有session数据</p><p>​                   //这样会把当前这个游览器对应的session文件删除</p><pre><code>session_destroy();</code></pre><p>​                ③每个网站都有一个安全退出，如果没有按安全退出则当前用户的session数据会保留在客户端等待垃圾回收机制回收【php.ini文件下修改session.gc_maxlifetime = 1440 】，这样有可能会收到攻击。</p><p>​                ④如果没有手动删除，那么系统是怎么维护安全删除的</p><p>​                ⑤整个session文件是依赖于session_start();这条语句创建起来为这次会话服务，但是创建出来后默认是没有数据，为空的。</p><p>​                ⑥session_start();会去判断其他文件有没有创建会话，所有其他文件写有start并不会重新创建多一个文件会话</p><p>​                ⑦session文件当用户关闭游览器重新打开的时候会重新创建一个新的session文件服务这新一轮的会话</p><p>​                </p><p>​        6、session的细节讨论</p><p>​                ①session数据默认储存在时间为1440s(24分钟)，从~/php.ini中session.gc_maxlifetime = 1440 中配置修改</p><p>​                ②session文件存放的路径是可以修改的，在php.ini中session_save_path = “/tmp”,修改php.ini文件都要重启phpStudy才能生效</p><p>​    总结：cookie和session的主要区别</p><p>​        ① Cookie是把用户的数据写给用户的游览器</p><p>​        ②Session技术把用户的数据写到用户独占的$_SESSION中，存在服务器的某个路径的文件中</p><p>​        ③在使用$_SESSION前要保证session被初始化，具体方法有两种</p><p>​                1、先调用session_start();</p><p>​                2、配置php.ini文件下的session.auto_start=1（不推介，这样会影响该效率，因为每个文件都创建一个session会消耗内存）</p><p>​        ④当用户访问session文件创建会话的时候会自动生成一个Set-Cookie返回给游览器，蓝色高亮的字跟session文件保存目录下对应文件名，所以每当创建一次会话是session的文件名是对应这个Set-Cookie的名字来找到它的 </p><p>​    </p><p>注意：当用户禁用cookie后，服务器每次session_start()都会创建一个全新的session文件，后果就是无法让多个页面php，去共享同一份session文件</p><p>请问？如果客户端禁用cookie怎样实现session技术共享多个页面？</p><p>答：</p><p>​    （1）在每个超链接上添加一个PHPSISSIONID=sessionId;同时在每个页面加入  </p><p>​    if(isset($_GET[‘PHPSESSION’])){</p><p>​           session_id($_GET[‘PHPSESSION’]);</p><p>​            </p><p>​        }</p><p>​    （2）使用常亮SID</p><p>​    （3）直接配置php.ini文件的 session.use_trans_sid =0设为1（在href–action—header会自动加SID，打单室js的跳转不会自动加）</p><p>session技术的实际运用：</p><p>​    1、验证码</p><p>​            ①防止登录时，恶意攻击</p><p>​            ②防止灌水</p><p>​            ③如果没有验证码防护，则客户端可以通过for循环无限循环测试出用户名和密码，数据库也会被无限次请求</p><p>在php.ini文件中关于Cookie和Session的配置</p><p>​    ①      session的名字可以通过session.name() 来获取，可以在php.ini配置文件中修改</p><p>​    </p><p>​    ②三个一组：    session.gc_maxlifetime=1440//默认最大生命周期</p><p>​                session.gc_probability=1</p><p>​                session.gc_divisor=1000</p><p>​        说明：上面三个配置共同来确定session的垃圾回收机制，gc_probability=1 和gc_divisor=1000的含义就是有1000份之一调用垃圾回收机制，也就是说，如果有一千个人访问该网页，那么一定会调用一次垃圾回收机制</p><p>​    ③自定义会话处理器</p><p>​            问题：为什么session文件打头是sess_*,能不能自己定义文件名？</p><p>​            问题：能不能把session信息高效的保存到memcache【缓存】中</p><p>​            说明：可以通过session_set_save_handler操作和设置自定义会话处理，并且需要在php.ini中配置session.save_handler=[files\user]</p><p>​    总结：session数据可以存放的位置</p><p>​        ①文件</p><p>​        ②数据库【不推荐】</p><p>​        ③内存（memcache）</p><p>​        ④网络文件nfs技术  //把session存放到网络系统</p><p>session和cookie的对比</p><p>​        ①存在的位置。cookie保存在客户端，session保存在服务器的文件系统/memcache/数据库/网络文件nfs</p><p>​        ②安全性。比较而言cookie的安全性比session要弱</p><p>​        ③网络传输量。cookie通过网络在客户端与服务器端传输，而session保存在服务器端，不需要传输</p><p>​        ④生命周期（20分钟为例）</p><p>​            （1）cookie的生命周期是累积的，从创建时就开始计时，20分钟后cookie生命周期结束，cookie无效</p><p>​            （2）session的生命周期是间隔的，从创建时，开始计时如在20分钟，没有访问过session,那么session信息无效，如果在20分钟内，比如第19分钟时访问过session，那么它的生命周期将重新开始计算</p>]]></content>
     
